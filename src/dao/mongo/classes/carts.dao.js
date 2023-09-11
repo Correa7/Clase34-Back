@@ -12,7 +12,7 @@ class CartClass{
         return newCart
     }
     async findPopulatedOne(id){
-        let cart = await CartModel.findOne({_id: id}).populate('products.idProduct')
+        let cart = await CartModel.findOne({_id: id}).populate('products.idProduct') 
         return cart
     }
     async updateOne(id){

@@ -69,7 +69,6 @@ const cartView =  async (req, res)=>{
             thumbnail,
             category,
             quantity
-            
           };
         });
         

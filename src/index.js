@@ -53,8 +53,8 @@ app.use('/api/cart', routesCart);
 const viewsCart = require('./routes/cart.route.view');
 app.use('/cart', viewsCart);  
 // Users
-const routesUsers = require('./routes/user.route');
-app.use('/api/user',routesUsers);
+// const routesUsers = require('./routes/user.route');
+// app.use('/api/user',routesUsers);
 // Sessions
 const sessions = require('./routes/sessions.route');
 app.use('/session', sessions);

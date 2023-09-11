@@ -150,7 +150,6 @@ const purchase = async (req, res)=> {
     try {
         const cid = req.params.cid
         const user= req.session.user.email
-        console.log('Email user: ' + user)
         // const user = req.body.email
         const newTicket = await cartService.purchase(cid, user)
         await cartService.updateProductsCart(cid, newTicket.prodOutStock )
@@ -160,9 +159,7 @@ const purchase = async (req, res)=> {
             amount: newTicket.ticket.amount, 
             purchaser:newTicket.ticket.purchaser
         }
-        // return res.status(200).render('purchased', { newTk })
-        return res.status(200).send({message:'New Ticket Created',payload:newTk})
-
+        return res.status(200).render('purchased', { newTk })
     } catch (error) {
         return res.status(500).render('error', { error: error.message })
     }

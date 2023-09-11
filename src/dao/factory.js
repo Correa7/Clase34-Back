@@ -15,14 +15,14 @@ switch (persistence) {
       UserMethods = userModel; 
   
       break;
-    // case 'FS':
-    //   console.log('Persistence with FileSystem');
-    //   const { cartManager } = require('./fs/classes/CartsManager.js');
-    //   CartMethods = cartManager;
-    //   const { productManager } = require('./fs/classes/ProductManager.js');
-    //   ProductMethods = productManager;
+    case 'FS':
+      console.log('Persistence with FileSystem');
+      const cartManager = require('./fs/classes/CartsManager.js');
+      CartMethods = cartManager;
+      const productManager = require('./fs/classes/ProductManager.js');
+      ProductMethods = productManager;
   
-    //   break;
+      break;
     default:
       break;
   }

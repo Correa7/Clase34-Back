@@ -1,14 +1,18 @@
 const mongoose = require('mongoose')
 const uuid4= require('uuid4') 
+
+
+const date = new Date(Date.now());
+
 const ticketSchema = new mongoose.Schema({
     code:{
-        type: Date,
+        type: String,
         default: uuid4(),
-
+ 
     },
     purchase_datetime:{
-        type: Date,
-        default: Date.now(),
+        type: String,
+        default: date.toString()
     },
     amount:{
         type:Number, 
@@ -17,8 +21,7 @@ const ticketSchema = new mongoose.Schema({
     },
     purchaser:{
         type:String,
-        unique:false, 
-        required:true,
+      
     }
 },{ versionKey: false })
 

@@ -3,7 +3,7 @@ const ProductService = require('../services/products.service.js');
 const productService = new ProductService();
 const cartService = require('../services/carts.service.js');
 
-
+  
 class TicketService {
 
     async createTicket(tk) {
@@ -29,5 +29,5 @@ class TicketService {
 
     }
 }
-module.exports = TicketService
+module.exports = TicketService 
 

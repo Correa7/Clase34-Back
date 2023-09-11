@@ -34,7 +34,7 @@ class CartService {
   }
   async getCartById(_id) {
     try {
-      const cart = await CartMethods.findPopulatedOne(_id);
+      const cart = await CartMethods.findPopulatedOne(_id); 
       return cart;
     } catch (error) {
       throw new Error(error.message);
@@ -149,7 +149,7 @@ class CartService {
         // consigue quantity de productos en cart
         const productsQuantity = cart.products.map(quan => quan.quantity)
         // consigue datos de los productos en cart
-        const productsData = await productService.getArrProductsData(productIds)
+        const productsData = await productService.getArrProductsData(productIds) 
 
         let amount = 0;
         let prodOutStock = []
@@ -164,7 +164,7 @@ class CartService {
               idProduct: prod._id,
               quantity: productsQuantity[index]
             });
-          }
+          } 
 
           else { //Si hay stock del product
             //este va a ser el nuevo stock del producto 

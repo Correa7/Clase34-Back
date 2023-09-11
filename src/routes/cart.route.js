@@ -22,7 +22,7 @@ const router = new Router()
 router.use(express.json())
 router.use(express.urlencoded({extended:true}))
 
-router.get("/", getAll); 
+router.get("/", getAll);  
 router.post("/", newCart);
 router.get("/:id", getCartById);
 router.post("/:cid/product/:pid", addPorductToCart)
